@@ -1,0 +1,26 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fond -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+  
+  <!-- Icône utilisateur -->
+  <circle cx="200" cy="150" r="60" fill="white" opacity="0.9"/>
+  <circle cx="200" cy="280" r="80" fill="white" opacity="0.9"/>
+  
+  <!-- Texte -->
+  <text x="200" y="380" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Photo Membre
+  </text>
+  
+  <!-- Motif décoratif -->
+  <circle cx="50" cy="50" r="3" fill="white" opacity="0.6"/>
+  <circle cx="350" cy="80" r="2" fill="white" opacity="0.6"/>
+  <circle cx="80" cy="320" r="4" fill="white" opacity="0.6"/>
+  <circle cx="320" cy="350" r="3" fill="white" opacity="0.6"/>
+</svg>

@@ -1,0 +1,117 @@
+{
+    "name": "La-Team - Groupe d'Informaticiens Passionnés",
+    "short_name": "La-Team",
+    "description": "Groupe de 5 jeunes informaticiens experts en développement web, réseaux et cybersécurité à Goma, RDC",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#6366f1",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "fr",
+    "dir": "ltr",
+    "categories": [
+        "business",
+        "productivity",
+        "technology",
+        "education"
+    ],
+    "icons": [
+        {
+            "src": "/media/image/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/media/image/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/media/image/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/media/image/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/media/image/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/media/image/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Page d'accueil La-Team sur desktop"
+        },
+        {
+            "src": "/media/image/screenshot-mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Page d'accueil La-Team sur mobile"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Notre Équipe",
+            "short_name": "Équipe",
+            "description": "Découvrir les membres de La-Team",
+            "url": "/#team",
+            "icons": [
+                {
+                    "src": "/media/image/icon-team.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Nos Services",
+            "short_name": "Services",
+            "description": "Voir nos services informatiques",
+            "url": "/#skills",
+            "icons": [
+                {
+                    "src": "/media/image/icon-services.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Contact",
+            "short_name": "Contact",
+            "description": "Nous contacter",
+            "url": "/#contact",
+            "icons": [
+                {
+                    "src": "/media/image/icon-contact.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "edge_side_panel": {
+        "preferred_width": 400
+    },
+    "launch_handler": {
+        "client_mode": "navigate-existing"
+    },
+    "handle_links": "preferred",
+    "protocol_handlers": [
+        {
+            "protocol": "web+la-team",
+            "url": "/?action=%s"
+        }
+    ]
+}

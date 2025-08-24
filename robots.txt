@@ -1,0 +1,83 @@
+User-agent: *
+Allow: /
+
+# Autoriser l'indexation de toutes les pages
+Allow: /main/
+Allow: /media/
+Allow: /config.js
+
+# Autoriser l'indexation des images
+Allow: /media/image/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Autoriser l'indexation des fichiers CSS et JS
+Allow: *.css
+Allow: *.js
+
+# Autoriser l'indexation des fichiers de configuration
+Allow: *.xml
+Allow: *.json
+
+# Bloquer l'accès aux fichiers sensibles
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /logs/
+Disallow: *.log
+Disallow: *.tmp
+Disallow: *.bak
+
+# Bloquer l'accès aux fichiers de développement
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /docs/
+
+# Sitemap
+Sitemap: https://la-team.com/sitemap.xml
+
+# Crawl-delay pour éviter de surcharger le serveur
+Crawl-delay: 1
+
+# Règles spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+# Règles spécifiques pour Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Règles spécifiques pour les robots sociaux
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 2
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 2
+
+# Règles pour les robots d'archivage
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 5
+
+# Règles pour les robots de recherche d'images
+User-agent: Googlebot-Image
+Allow: /media/image/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.webp
+Crawl-delay: 0.5

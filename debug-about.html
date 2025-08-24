@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Section À propos - La-Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .debug-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .about-section {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        button {
+            background: #2196f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1976d2;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #4caf50; color: white; }
+        .error { background: #f44336; color: white; }
+        .info { background: #2196f3; color: white; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Debug Section "À propos" - La-Team</h1>
+    
+    <div class="debug-section">
+        <h2>Test de la Section "À propos"</h2>
+        <p>Cette page teste si la section "À propos" peut être affichée correctement.</p>
+        
+        <button onclick="testAboutSection()">Tester la Section À propos</button>
+        <button onclick="checkVisibility()">Vérifier la Visibilité</button>
+        <button onclick="showAboutSection()">Afficher la Section</button>
+        <button onclick="hideAboutSection()">Masquer la Section</button>
+    </div>
+
+    <div id="about" class="about-section">
+        <h2>À propos de La-Team</h2>
+        <p><strong>La-Team</strong> est un groupe de <strong>5 jeunes informaticiens passionnés</strong> par le <strong>développement logiciel</strong>, 
+        les <strong>réseaux</strong>, la <strong>cybersécurité</strong> et les <strong>nouvelles technologies</strong>.</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Membres</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Compétences</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projets</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="debug-output" class="debug-section">
+        <h3>Sortie de Débogage</h3>
+        <div id="debug-content"></div>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const debugContent = document.getElementById('debug-content');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.className = `status ${type}`;
+            logEntry.innerHTML = `<strong>[${timestamp}]</strong> ${message}`;
+            debugContent.appendChild(logEntry);
+            
+            // Garder seulement les 10 dernières entrées
+            const entries = debugContent.querySelectorAll('.status');
+            if (entries.length > 10) {
+                entries[0].remove();
+            }
+        }
+
+        function testAboutSection() {
+            log('🧪 Test de la section "À propos"...', 'info');
+            
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection) {
+                log('❌ Section "À propos" non trouvée dans le DOM', 'error');
+                return;
+            }
+            
+            log('✅ Section "À propos" trouvée dans le DOM', 'success');
+            
+            // Vérifier les styles
+            const computedStyle = window.getComputedStyle(aboutSection);
+            log(`📏 Largeur: ${computedStyle.width}`, 'info');
+            log(`📏 Hauteur: ${computedStyle.height}`, 'info');
+            log(`👁️ Display: ${computedStyle.display}`, 'info');
+            log(`👁️ Visibility: ${computedStyle.visibility}`, 'info');
+            log(`👁️ Opacity: ${computedStyle.opacity}`, 'info');
+            log(`🎨 Background: ${computedStyle.backgroundColor}`, 'info');
+            log(`🎨 Color: ${computedStyle.color}`, 'info');
+            
+            // Vérifier la position
+            const rect = aboutSection.getBoundingClientRect();
+            log(`📍 Position: x=${rect.x}, y=${rect.y}`, 'info');
+            log(`📍 Taille: w=${rect.width}, h=${rect.height}`, 'info');
+            
+            // Vérifier si elle est visible dans le viewport
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            log(`👁️ Visible dans le viewport: ${isVisible}`, isVisible ? 'success' : 'error');
+        }
+
+        function checkVisibility() {
+            log('🔍 Vérification de la visibilité...', 'info');
+            
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection) {
+                log('❌ Section "À propos" non trouvée', 'error');
+                return;
+            }
+            
+            // Vérifier les classes CSS
+            log(`🏷️ Classes CSS: ${aboutSection.className}`, 'info');
+            
+            // Vérifier les attributs
+            log(`🏷️ ID: ${aboutSection.id}`, 'info');
+            log(`🏷️ Style inline: ${aboutSection.style.cssText || 'Aucun'}`, 'info');
+            
+            // Vérifier les styles calculés
+            const computedStyle = window.getComputedStyle(aboutSection);
+            const importantStyles = [
+                'display', 'visibility', 'opacity', 'position', 'z-index',
+                'background-color', 'color', 'width', 'height', 'margin', 'padding'
+            ];
+            
+            importantStyles.forEach(style => {
+                const value = computedStyle.getPropertyValue(style);
+                log(`🎨 ${style}: ${value}`, 'info');
+            });
+        }
+
+        function showAboutSection() {
+            log('👁️ Affichage de la section "À propos"...', 'info');
+            
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection) {
+                log('❌ Section "À propos" non trouvée', 'error');
+                return;
+            }
+            
+            aboutSection.style.display = 'block';
+            aboutSection.style.visibility = 'visible';
+            aboutSection.style.opacity = '1';
+            aboutSection.classList.remove('hidden');
+            aboutSection.classList.add('visible');
+            
+            log('✅ Section "À propos" affichée', 'success');
+        }
+
+        function hideAboutSection() {
+            log('🙈 Masquage de la section "À propos"...', 'info');
+            
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection) {
+                log('❌ Section "À propos" non trouvée', 'error');
+                return;
+            }
+            
+            aboutSection.style.display = 'none';
+            aboutSection.style.visibility = 'hidden';
+            aboutSection.style.opacity = '0';
+            aboutSection.classList.add('hidden');
+            aboutSection.classList.remove('visible');
+            
+            log('✅ Section "À propos" masquée', 'success');
+        }
+
+        // Test automatique au chargement
+        window.addEventListener('load', function() {
+            log('🚀 Page chargée, test automatique...', 'info');
+            setTimeout(() => {
+                testAboutSection();
+                checkVisibility();
+            }, 1000);
+        });
+
+        // Test de la section toutes les 5 secondes
+        setInterval(() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                const rect = aboutSection.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                if (!isVisible) {
+                    log('⚠️ Section "À propos" n\'est pas visible dans le viewport', 'error');
+                }
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

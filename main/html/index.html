@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="linght">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== SEO META TAGS ===== -->
+    <title>La-Team | Développement Web & Réseaux</title>
+    <meta name="description" content="La-Team est un groupe de 5 jeunes informaticiens passionnés par le développement logiciel, les réseaux, la cybersécurité et les nouvelles technologies. Découvrez nos compétences en HTML, CSS, JavaScript, PHP, React, C#, .NET et plus encore.">
+    <meta name="keywords" content="La-Team,Goma,ISIG-Goma,jean-marc verbeck,informatique,VERBECK,Grace,Liage,RDC,isig-goma,Nord-Kivu,NOR,hope,hope,HOPE,Robert,kilesu,KILESU,Robert,kilesu,KILESU,informaticiens, développement web, HTML, CSS, JavaScript, PHP, React, C#, .NET, réseaux, cybersécurité, Goma, RDC, ISIG, INPP">
+    <meta name="author" content="JEAN-MARC VERBECK">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- ===== OPEN GRAPH / FACEBOOK ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://la-team.com/">
+    <meta property="og:title" content="La-Team - Groupe d'Informaticiens Passionnés">
+    <meta property="og:description" content="Découvrez La-Team, un groupe de 5 jeunes informaticiens experts en développement web, réseaux et cybersécurité à Goma, RDC.">
+    <meta property="og:image" content="https://la-team.com/media/image/la-team-logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="La-Team">
+    
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La-Team - Groupe d'Informaticiens Passionnés">
+    <meta name="twitter:description" content="Découvrez La-Team, un groupe de 5 jeunes informaticiens experts en développement web, réseaux et cybersécurité à Goma, RDC.">
+    <meta name="twitter:image" content="https://la-team.com/media/image/la-team-logo.jpg">
+    
+    <!-- ===== CANONICAL & ALTERNATE LANGUAGES ===== -->
+    <link rel="canonical" href="https://la-team.com/">
+    <link rel="alternate" hreflang="fr" href="https://la-team.com/">
+    <link rel="alternate" hreflang="en" href="https://la-team.com/en/">
+    
+    <!-- ===== FAVICON & APP ICONS ===== -->
+    <link rel="icon" type="image/x-icon" href="../../media/image/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../media/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../media/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../media/image/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    
+    <!-- ===== STRUCTURED DATA / SCHEMA.ORG ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "La-Team",
+        "description": "Groupe d'informaticiens passionnés par le développement logiciel, les réseaux, la cybersécurité et les nouvelles technologies",
+        "url": "https://la-team.com",
+        "logo": "https://la-team.com/media/image/la-team-logo.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Goma",
+            "addressCountry": "CD",
+            "addressRegion": "Nord-Kivu"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@la-team.com"
+        },
+        "sameAs": [
+            "https://github.com/la-team",
+            "https://linkedin.com/company/la-team",
+            "https://twitter.com/la-team"
+        ],
+        "member": [
+            {
+                "@type": "Person",
+                "name": "KUTEKEMENI ASIANGAME Naomie",
+                "jobTitle": "Étudiante ISIG",
+                "knowsAbout": ["Bureautique", "Organisation", "Travail en équipe"]
+            },
+            {
+                "@type": "Person",
+                "name": "JEAN-MARC VERBECK",
+                "jobTitle": "Administrateur Réseau & Développeur Full Stack",
+                "knowsAbout": ["Administration Réseau", "Cybersécurité", "Développement Web", "C#", ".NET"]
+            },
+            {
+                "@type": "Person",
+                "name": "NDAKOLA HOPE",
+                "jobTitle": "Mécanicien & Technicien",
+                "knowsAbout": ["Mécanique générale", "Formation technique", "Esprit technique"]
+            },
+            {
+                "@type": "Person",
+                "name": "MUMBERE GRACE",
+                "jobTitle": "Développeuse Full Stack",
+                "knowsAbout": ["React.js", "NestJS", "SQL Server", "MySQL", "Réseaux"]
+            },
+            {
+                "@type": "Person",
+                "name": "KILESU ROBERT",
+                "jobTitle": "Développeur C#",
+                "knowsAbout": ["C#", "Python", "Windows", "Bureautique"]
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services Informatiques",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Développement Web",
+                        "description": "Sites web modernes et responsifs avec HTML, CSS, JavaScript, PHP, React"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Développement Desktop",
+                        "description": "Applications desktop en C# et .NET"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Administration Réseau",
+                        "description": "Configuration et sécurisation de réseaux informatiques"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-code-slash me-2"></i>La-Team
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Équipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm theme-toggle" id="themeToggle" title="Basculer le thème">
+                            <i class="bi bi-moon-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+ 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" aria-label="Page d'accueil">
+        <div class="hero-background" aria-hidden="true"></div>
+        <div class="container h-100 d-flex align-items-center">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">
+                    <span class="typewriter-text">Bienvenue chez La-Team</span>
+                </h1>
+                <p class="hero-subtitle fade-in fade-in-delay-1">
+                    Construisons l'avenir numérique ensemble
+                </p>
+                <button class="btn btn-primary btn-lg hero-btn fade-in fade-in-delay-2" onclick="scrollToSection('team')" aria-label="Découvrir l'équipe La-Team">
+                    <i class="bi bi-people-fill me-2" aria-hidden="true"></i>Découvrir l'équipe
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator fade-in fade-in-delay-3" aria-hidden="true">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding section-bg-pattern" aria-labelledby="about-title">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <div class="about-header-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+                    <div class="decoration-line"></div>
+                </div>
+                <h2 id="about-title" class="section-title slide-in-left">À propos de La-Team</h2>
+                <p class="section-subtitle slide-in-left fade-in-delay-1">Découvrez notre passion pour la technologie et l'innovation</p>
+                <div class="about-subtitle-decoration">
+                    <i class="bi bi-arrow-down-circle"></i>
+                </div>
+            </div>
+            
+            <div class="about-main-content">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-8 col-md-10 text-center">
+                        <div class="about-hero-text mb-5">
+                            <p class="lead mb-4 text-animate">
+                                <strong>La-Team</strong> est un groupe de <strong>5 jeunes informaticiens passionnés</strong> par le <strong>développement logiciel</strong>, 
+                                les <strong>réseaux</strong>, la <strong>cybersécurité</strong> et les <strong>nouvelles technologies</strong>.
+                            </p>
+                            <p class="mb-4 text-animate fade-in-delay-1">
+                                Nous croyons en l'<strong>innovation</strong>, au <strong>travail d'équipe</strong> et à la création de <strong>solutions numériques</strong> 
+                                adaptées aux besoins de notre communauté.
+                            </p>
+                        </div>
+                        
+                        <div class="about-stats-container" role="region" aria-label="Statistiques de La-Team">
+                            <div class="about-stats" role="list">
+                                <div class="about-stat stat-animate" role="listitem">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <div class="about-stat-number counter-animate" aria-label="5 membres">5</div>
+                                    <div class="about-stat-label">Membres</div>
+                                </div>
+                                <div class="about-stat stat-animate fade-in-delay-1" role="listitem">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <div class="about-stat-number counter-animate" aria-label="Plus de 15 compétences">15+</div>
+                                    <div class="about-stat-label">Compétences</div>
+                                </div>
+                                <div class="about-stat stat-animate fade-in-delay-2" role="listitem">
+                                    <div class="stat-icon">
+                                        <i class="bi bi-rocket-takeoff-fill"></i>
+                                    </div>
+                                    <div class="about-stat-number counter-animate" aria-label="Plus de 10 projets">10+</div>
+                                    <div class="about-stat-label">Projets</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-features mt-5">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-md-4">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-lightbulb-fill"></i>
+                                        </div>
+                                        <h4>Innovation</h4>
+                                        <p>Nous repoussons les limites de la technologie</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-shield-check-fill"></i>
+                                        </div>
+                                        <h4>Qualité</h4>
+                                        <p>Excellence dans chaque ligne de code</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <i class="bi bi-globe"></i>
+                                        </div>
+                                        <h4>Impact</h4>
+                                        <p>Solutions qui transforment le monde</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Éléments décoratifs flottants -->
+        <div class="floating-elements">
+            <div class="floating-element element-1">
+                <i class="bi bi-code-slash"></i>
+            </div>
+            <div class="floating-element element-2">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <div class="floating-element element-3">
+                <i class="bi bi-database"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding bg-light section-bg-pattern" aria-labelledby="team-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="team-title" class="section-title slide-in-right">Notre Équipe</h2>
+                <p class="section-subtitle slide-in-right fade-in-delay-1">Découvrez les talents qui composent La-Team</p>
+            </div>
+            
+            <div class="row g-4" role="list" aria-label="Membres de l'équipe La-Team">
+                <!-- Naomie -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <article class="team-card card-animate" data-bs-toggle="modal" data-bs-target="#modalNaomie" tabindex="0" role="button" aria-label="Voir le profil de Naomie KUTEKEMENI">
+                        <div class="team-card-image">
+                            <img src="../../media/image/naomie.jpg" alt="Photo de Naomie KUTEKEMENI ASIANGAME, étudiante ISIG" class="img-fluid" loading="lazy">
+                            <div class="team-card-overlay" aria-hidden="true">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-card-name">KUTEKEMENI Naomie</h3>
+                            <p class="team-card-role">Étudiante ISIG</p>
+                            <button class="btn btn-outline-primary btn-sm btn-animate" aria-label="Voir le profil complet de Naomie">Voir profil</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Jean-Marc -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <article class="team-card card-animate fade-in-delay-1" data-bs-toggle="modal" data-bs-target="#modalJeanMarc" tabindex="0" role="button" aria-label="Voir le profil de Jean-Marc VERBECK">
+                        <div class="team-card-image">
+                            <img src="../../media/image/jean-marc.jpg" alt="Photo de Jean-Marc VERBECK, Administrateur Réseau & Développeur Full Stack" class="img-fluid" loading="lazy">
+                            <div class="team-card-overlay" aria-hidden="true">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-card-name">JEAN-MARC VERBECK</h3>
+                            <p class="team-card-role">Admin Réseau & Developpeur Web</p>
+                            <button class="btn btn-outline-primary btn-sm btn-animate" aria-label="Voir le profil complet de Jean-Marc">Voir profil</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Hope -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <article class="team-card card-animate fade-in-delay-2" data-bs-toggle="modal" data-bs-target="#modalHope" tabindex="0" role="button" aria-label="Voir le profil de NDAKOLA HOPE">
+                        <div class="team-card-image">
+                            <img src="../../media/image/hope.jpg" alt="Photo de NDAKOLA HOPE, Mécanicien & Technicien" class="img-fluid" loading="lazy">
+                            <div class="team-card-overlay" aria-hidden="true">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-card-name">NDAKOLA HOPE</h3>
+                            <p class="team-card-role">Mécanicien & Technicien</p>
+                            <button class="btn btn-outline-primary btn-sm btn-animate" aria-label="Voir le profil complet de Hope">Voir profil</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Grace -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <article class="team-card card-animate fade-in-delay-3" data-bs-toggle="modal" data-bs-target="#modalGrace" tabindex="0" role="button" aria-label="Voir le profil de MUMBERE GRACE">
+                        <div class="team-card-image">
+                            <img src="../../media/image/grace.jpg" alt="Photo de MUMBERE GRACE, Développeuse Full Stack" class="img-fluid" loading="lazy">
+                            <div class="team-card-overlay" aria-hidden="true">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-card-name">MUMBERE GRACE</h3>
+                            <p class="team-card-role">Développeuse Full Stack</p>
+                            <button class="btn btn-outline-primary btn-sm btn-animate" aria-label="Voir le profil complet de Grace">Voir profil</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Robert -->
+                <div class="col-lg-4 col-md-6" role="listitem">
+                    <article class="team-card card-animate fade-in-delay-4" data-bs-toggle="modal" data-bs-target="#modalRobert" tabindex="0" role="button" aria-label="Voir le profil de KILESU ROBERT">
+                        <div class="team-card-image">
+                            <img src="../../media/image/robert.jpg" alt="Photo de KILESU ROBERT, Développeur C#" class="img-fluid" loading="lazy">
+                            <div class="team-card-overlay" aria-hidden="true">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+                        </div>
+                        <div class="team-card-body">
+                            <h3 class="team-card-name">KILESU ROBERT</h3>
+                            <p class="team-card-role">Développeur C#</p>
+                            <button class="btn btn-outline-primary btn-sm btn-animate" aria-label="Voir le profil complet de Robert">Voir profil</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding section-bg-pattern">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Compétences</h2>
+                <p class="section-subtitle">Un éventail de talents techniques et humains</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Développement Web -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-globe me-2"></i>Développement Web
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">NestJS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programmation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-code-square me-2"></i>Programmation
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">C#</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">.NET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réseaux & Cybersécurité -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-shield-lock me-2"></i>Réseaux & Cybersécurité
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Administration</span>
+                            <span class="skill-badge">Configuration</span>
+                            <span class="skill-badge">Sécurité</span>
+                            <span class="skill-badge">CCTV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de données -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-database me-2"></i>Bases de données
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">SQL Server</span>
+                            <span class="skill-badge">Access</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bureautique -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-file-earmark-text me-2"></i>Bureautique
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Word</span>
+                            <span class="skill-badge">Excel</span>
+                            <span class="skill-badge">PowerPoint</span>
+                            <span class="skill-badge">Outlook</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">
+                            <i class="bi bi-people me-2"></i>Soft Skills
+                        </h4>
+                        <div class="skill-badges">
+                            <span class="skill-badge">Organisation</span>
+                            <span class="skill-badge">Travail d'équipe</span>
+                            <span class="skill-badge">Communication</span>
+                            <span class="skill-badge">Autonomie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light section-bg-pattern">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Projets</h2>
+                <p class="section-subtitle">Réalisations académiques et professionnelles</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-book project-icon"></i>
+                            <h5>Gestion de Bibliothèque</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Application desktop de gestion de bibliothèque développée en C#/.NET</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">.NET</span>
+                                <span class="tech-tag">SQL Server</span>
+                            </div>
+                            <p class="project-author">Par Verbeck</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-globe project-icon"></i>
+                            <h5>Sites Web Dynamiques</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Développement de sites web modernes et responsifs</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <p class="project-author">Par Verbeck & Grace</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-building project-icon"></i>
+                            <h5>Stage CNSS/INPP</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Expérience en secrétariat et technicien informatique</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Bureautique</span>
+                                <span class="tech-tag">Support IT</span>
+                            </div>
+                            <p class="project-author">Par Naomie</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-gear project-icon"></i>
+                            <h5>Formation Mécanique</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Formation en mécanique générale et brevet INPP</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Mécanique</span>
+                                <span class="tech-tag">Formation</span>
+                            </div>
+                            <p class="project-author">Par Hope</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-cup-hot project-icon"></i>
+                            <h5>Stage BRALIMA</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Stage en entreprise avec expérience en développement</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Bureautique</span>
+                            </div>
+                            <p class="project-author">Par Robert</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="bi bi-phone project-icon"></i>
+                            <h5>Applications React</h5>
+                        </div>
+                        <div class="project-card-body">
+                            <p>Développement d'applications web modernes avec React</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">NestJS</span>
+                                <span class="tech-tag">SQL Server</span>
+                            </div>
+                            <p class="project-author">Par Grace</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-bg-pattern">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-nous</h2>
+                <p class="section-subtitle">Discutons de vos projets et de nos collaborations</p>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Informations de contact</h4>
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-geo-alt-fill me-3"></i>
+                            <span>Goma, République Démocratique du Congo</span>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-envelope-fill me-3"></i>
+                            <span>lateamisig@gmail.com</span>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="bi bi-phone-fill me-3"></i>
+                            <span>+243 814 717 237</span>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label class="form-label">Votre nom</label>
+                            <input type="text" class="form-control" placeholder="Entrez votre nom complet" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Votre email</label>
+                            <input type="email" class="form-control" placeholder="Entrez votre adresse email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Votre message</label>
+                            <textarea class="form-control" rows="5" placeholder="Décrivez votre projet ou demande" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-send me-2"></i>Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <div class="footer-brand">
+                        <i class="bi bi-code-slash me-2"></i>
+                        <span class="fw-bold">La-Team</span>
+                    </div>
+                    <p class="footer-text">Construisons l'avenir numérique ensemble</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">&copy; 2025 La-Team. Tous droits réservés.</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="#" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="#" title="Twitter">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" title="Email">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Team Member Modals -->
+    
+    <!-- Modal Naomie -->
+    <div class="modal fade" id="modalNaomie" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">KUTEKEMENI ASIANGAME Naomie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../../media/image/naomie.jpg" alt="Naomie" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Formation</h6>
+                            <p>Étudiante à l'ISIG</p>
+                            
+                            <h6>Expériences</h6>
+                            <ul>
+                                <li>CNSS (secrétariat)</li>
+                                <li>INPP (technicien informatique)</li>
+                            </ul>
+                            
+                            <h6>Compétences</h6>
+                            <ul>
+                                <li>Bureautique (Word, Excel, PowerPoint)</li>
+                                <li>Organisation</li>
+                                <li>Travail en équipe</li>
+                                <li>Communication</li>
+                            </ul>
+                            
+                            <h6>Langues</h6>
+                            <p>Français, Lingala, Swahili</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Jean-Marc -->
+    <div class="modal fade" id="modalJeanMarc" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">JEAN-MARC VERBECK</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../../media/image/jean-marc.jpg" alt="Jean-Marc" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Formation</h6>
+                            <p>Administrateur Réseau Développeur Full Stack (Licence ISIG-Goma)</p>
+                            
+                            <h6>Compétences techniques</h6>
+                            <ol>
+                                <li>Administration Réseau & Cybersécurité</li>
+                                <li>Développement Web (HTML, CSS, JS, PHP, BOOTSTRAP)</li>
+                                <li>Programmation Desktop (C#, .NET)</li>
+                                <li>Bases de données (MySQL, SQL Server)</li>
+                                <li>Outils : Git/GitHub, Visual Studio, VS Code</li>
+                            </ol>
+                            
+                            <h6>Expérience</h6>
+                            <p>Technicien réseau & support informatique à ISIG-Goma, projets web et desktop</p>
+                            
+                            <h6>Certifications</h6>
+                            <p>Hikvision Academy (CCTV)</p>
+                            
+                            <h6>Langues</h6>
+                            <p>Français, Swahili, Lingala, notions d'anglais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hope -->
+    <div class="modal fade" id="modalHope" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">NDAKOLA HOPE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../../media/image/hope.jpg" alt="Hope" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Formation</h6>
+                            <ul>
+                                <li>Diplôme d'État en mécanique générale (Institut Keshero, 2022-2023)</li>
+                                <li>Brevet en mécanique (formation INPP, 3 mois)</li>
+                            </ul>
+                            
+                            <h6>Distinctions</h6>
+                            <p>Distinctions en anglais</p>
+                            
+                            <h6>Profil</h6>
+                            <ul>
+                                <li>Esprit technique</li>
+                                <li>Rigoureux</li>
+                                <li>Motivé</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Grace -->
+    <div class="modal fade" id="modalGrace" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MUMBERE GRACE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../../media/image/grace.jpg" alt="Grace" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Formation</h6>
+                            <p>Licence 2 en Informatique appliquée à la gestion d'entreprise</p>
+                            
+                            <h6>Compétences</h6>
+                            <ul>
+                                <li>React.js</li>
+                                <li>NestJS</li>
+                                <li>SQL Server</li>
+                                <li>MySQL</li>
+                                <li>Réseaux & maintenance</li>
+                            </ul>
+                            
+                            <h6>Qualités</h6>
+                            <ul>
+                                <li>Organisation</li>
+                                <li>Collaboration</li>
+                                <li>Autonomie</li>
+                            </ul>
+                            
+                            <h6>Intérêts</h6>
+                            <p>Nouvelles technologies, cybersécurité, développement d'applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Robert -->
+    <div class="modal fade" id="modalRobert" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">KILESU ROBERT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="../../media/image/robert.jpg" alt="Robert" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-8">
+                            <h6>Formation</h6>
+                            <p>Finaliste en Informatique de gestion</p>
+                            
+                            <h6>Expériences</h6>
+                            <ul>
+                                <li>Stage à l'INPP</li>
+                                <li>BRALIMA Bukavu</li>
+                            </ul>
+                            
+                            <h6>Compétences</h6>
+                            <ul>
+                                <li>C#</li>
+                                <li>Notions Python</li>
+                                <li>Windows</li>
+                                <li>Word, Excel, Access, PowerPoint, Outlook</li>
+                            </ul>
+                            
+                            <h6>Langues</h6>
+                            <p>Français, Swahili, Lingala, notions d'anglais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Configuration -->
+    <script src="../../config.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

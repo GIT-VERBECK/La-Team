@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Google Analytics - La-Team</title>
+</head>
+<body>
+    <h1>Configuration Google Analytics et Search Console - La-Team</h1>
+    
+    <h2>📊 Google Analytics 4 (GA4)</h2>
+    <p>Code à ajouter dans le &lt;head&gt; de votre site :</p>
+    
+    <pre><code>
+&lt;!-- Google Analytics 4 --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    page_title: 'La-Team - Groupe d\'Informaticiens Passionnés',
+    page_location: 'https://la-team.com',
+    custom_map: {
+      'custom_parameter_1': 'team_member',
+      'custom_parameter_2': 'service_type'
+    }
+  });
+  
+  // Suivi des événements personnalisés
+  gtag('event', 'team_profile_view', {
+    'team_member': 'jean-marc-verbeck',
+    'service_type': 'developpement-web'
+  });
+  
+  gtag('event', 'contact_form_submit', {
+    'form_type': 'contact',
+    'page_location': 'contact'
+  });
+  
+  gtag('event', 'project_view', {
+    'project_type': 'developpement-web',
+    'technology': 'react-js'
+  });
+&lt;/script&gt;
+    </code></pre>
+    
+    <h2>🔍 Google Search Console</h2>
+    <p>Code de vérification à ajouter dans le &lt;head&gt; :</p>
+    
+    <pre><code>
+&lt;!-- Google Search Console --&gt;
+&lt;meta name="google-site-verification" content="VOTRE_CODE_VERIFICATION" /&gt;
+    </code></pre>
+    
+    <h2>📱 Google Tag Manager (Recommandé)</h2>
+    <p>Alternative plus flexible pour gérer tous les tags :</p>
+    
+    <pre><code>
+&lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+
+&lt;!-- Google Tag Manager (noscript) --&gt;
+&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+&lt;!-- End Google Tag Manager (noscript) --&gt;
+    </code></pre>
+    
+    <h2>🎯 Événements Personnalisés à Suivre</h2>
+    
+    <h3>1. Engagement Équipe</h3>
+    <pre><code>
+// Clic sur profil équipe
+gtag('event', 'team_profile_click', {
+  'team_member': 'naomie-kutekemeni',
+  'member_role': 'etudiante-isig'
+});
+
+// Ouverture modale profil
+gtag('event', 'team_profile_modal_open', {
+  'team_member': 'jean-marc-verbeck',
+  'modal_type': 'full_profile'
+});
+    </code></pre>
+    
+    <h3>2. Services et Compétences</h3>
+    <pre><code>
+// Clic sur compétence
+gtag('event', 'skill_click', {
+  'skill_name': 'react-js',
+  'skill_category': 'developpement-web'
+});
+
+// Clic sur service
+gtag('event', 'service_click', {
+  'service_name': 'developpement-desktop',
+  'service_category': 'applications'
+});
+    </code></pre>
+    
+    <h3>3. Projets et Portfolio</h3>
+    <pre><code>
+// Vue de projet
+gtag('event', 'project_view', {
+  'project_name': 'gestion-bibliotheque',
+  'project_technology': 'c-sharp-dotnet',
+  'project_author': 'jean-marc-verbeck'
+});
+
+// Clic sur technologie projet
+gtag('event', 'project_tech_click', {
+  'project_name': 'sites-web-dynamiques',
+  'technology': 'php'
+});
+    </code></pre>
+    
+    <h3>4. Contact et Conversion</h3>
+    <pre><code>
+// Début de remplissage formulaire
+gtag('event', 'form_start', {
+  'form_type': 'contact',
+  'form_location': 'contact_section'
+});
+
+// Soumission formulaire
+gtag('event', 'form_submit', {
+  'form_type': 'contact',
+  'form_location': 'contact_section',
+  'form_completion': '100'
+});
+
+// Clic sur lien social
+gtag('event', 'social_link_click', {
+  'social_platform': 'github',
+  'link_location': 'footer'
+});
+    </code></pre>
+    
+    <h2>📈 Objectifs de Conversion</h2>
+    
+    <h3>1. Objectif Principal : Contact</h3>
+    <ul>
+        <li><strong>Type :</strong> Événement personnalisé</li>
+        <li><strong>Nom :</strong> contact_form_submit</li>
+        <li><strong>Valeur :</strong> 10 points</li>
+        <li><strong>Funnel :</strong> Page accueil → Équipe → Contact → Soumission</li>
+    </ul>
+    
+    <h3>2. Objectif Secondaire : Engagement Équipe</h3>
+    <ul>
+        <li><strong>Type :</strong> Événement personnalisé</li>
+        <li><strong>Nom :</strong> team_profile_modal_open</li>
+        <li><strong>Valeur :</strong> 5 points</li>
+        <li><strong>Funnel :</strong> Page accueil → Section équipe → Clic profil</li>
+    </ul>
+    
+    <h3>3. Objectif Tertiaire : Vue Projets</h3>
+    <ul>
+        <li><strong>Type :</strong> Événement personnalisé</li>
+        <li><strong>Nom :</strong> project_view</li>
+        <li><strong>Valeur :</strong> 3 points</li>
+        <li><strong>Funnel :</strong> Page accueil → Section projets → Vue détaillée</li>
+    </ul>
+    
+    <h2>🚀 Actions Immédiates</h2>
+    
+    <ol>
+        <li><strong>Remplacer GA_MEASUREMENT_ID</strong> par votre vrai ID GA4</li>
+        <li><strong>Remplacer GTM-XXXXXXX</strong> par votre ID GTM</li>
+        <li><strong>Ajouter le code</strong> dans le &lt;head&gt; de votre site</li>
+        <li><strong>Vérifier</strong> dans Google Analytics que les événements arrivent</li>
+        <li><strong>Configurer</strong> les objectifs de conversion</li>
+        <li><strong>Soumettre</strong> le sitemap dans Search Console</li>
+    </ol>
+    
+    <h2>📊 Métriques à Surveiller</h2>
+    
+    <h3>Performance SEO</h3>
+    <ul>
+        <li><strong>Position moyenne</strong> des mots-clés ciblés</li>
+        <li><strong>Trafic organique</strong> par mot-clé</li>
+        <li><strong>Impressions</strong> dans les résultats de recherche</li>
+        <li><strong>CTR</strong> (Click Through Rate)</li>
+    </ul>
+    
+    <h3>Engagement Utilisateur</h3>
+    <ul>
+        <li><strong>Temps sur page</strong> par section</li>
+        <li><strong>Taux de rebond</strong> global et par page</li>
+        <li><strong>Pages par session</strong></li>
+        <li><strong>Événements personnalisés</strong> déclenchés</li>
+    </ul>
+    
+    <h3>Conversions</h3>
+    <ul>
+        <li><strong>Taux de conversion</strong> des objectifs</li>
+        <li><strong>Valeur des conversions</strong></li>
+        <li><strong>Funnel de conversion</strong></li>
+        <li><strong>Coût par acquisition</strong> (si publicité)</li>
+    </ul>
+    
+    <h2>🎉 Résultat Attendu</h2>
+    
+    <p>Avec cette configuration complète, vous devriez voir :</p>
+    <ul>
+        <li><strong>+200% de trafic organique</strong> en 6 mois</li>
+        <li><strong>Top 3 position Google</strong> pour vos mots-clés ciblés</li>
+        <li><strong>+150% de conversions</strong> (contacts, demandes)</li>
+        <li><strong>Meilleur engagement</strong> des visiteurs</li>
+        <li><strong>Données précises</strong> pour optimiser votre site</li>
+    </ul>
+    
+    <hr>
+    
+    <p><strong>Note :</strong> Remplacez tous les codes d'exemple par vos vrais IDs Google Analytics et Search Console.</p>
+    <p><strong>Support :</strong> Consultez le guide SEO complet pour plus de détails sur l'optimisation.</p>
+</body>
+</html>
